@@ -16,7 +16,5 @@ namespace MinimalAPI.Models
         [Range(0, double.MaxValue)]
         [Required]
         public double Price { get; set; }
-
-        public Guid CorrelationId { get; set; }
     }
 }
