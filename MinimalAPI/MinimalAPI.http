@@ -1,0 +1,25 @@
+﻿@MinimalAPI_HostAddress = http://localhost:5223
+
+### Creating a new Product
+POST {{MinimalAPI_HostAddress}}/api/items/products
+Content-Type: application/json
+
+{
+  "name": "Cart",
+  "price": 21000
+}
+
+### Reading the product
+
+@id=0
+GET {{MinimalAPI_HostAddress}}/api/items/products/{{id}}
+
+### Updating the product
+
+PUT {{MinimalAPI_HostAddress}}/api/items/products/{{id}}
+
+### Delete the product
+
+DELETE {{MinimalAPI_HostAddress}}/api/items/products/{{id}}
+
+###

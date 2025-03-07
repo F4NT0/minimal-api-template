@@ -2,16 +2,21 @@
 
 namespace MinimalAPI.Models
 {
-    public class Product
+    public class Product 
     {
-        [Key]
-        public int Id { get; set; }
-        
-        [Required]
-        [StringLength(50)]
-        public string Name { get; set; }
+        public Product() { }
 
-        [Range(0, int.MaxValue)]
-        public decimal Price { get; set; }
+        [Key]
+        public long Id { get; set; }
+        
+        [StringLength(50)]
+        [Required]
+        public required string Name { get; set; }
+
+        [Range(0, double.MaxValue)]
+        [Required]
+        public double Price { get; set; }
+
+        public Guid CorrelationId { get; set; }
     }
 }
